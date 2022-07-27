@@ -6,7 +6,10 @@
 
 </head>
 <body>
-
+    {% if user != username or pas != password %}
+    <h1> You have to login </h1>
+    <a href = "{{url_for('login') }}" style = "font-size: 30px"> login </a>
+    {% else %}
 <h2>Facebook Search Bar</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -21,7 +24,7 @@
   <li><a href="#">Cindy</a></li>
   <li><a href="#">Loai</a></li>
 </ul>
-
+{% endif %}
 <script>
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
