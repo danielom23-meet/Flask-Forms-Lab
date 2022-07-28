@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		h1 { color : white; }
+	</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,7 +12,13 @@
 
 </head>
 <body>
-
+	{% if friend in facebook_friends %}
+	<h1> True </h1>
+	<h1> {{friend}} exists in the facebook friends </h1>
+	{% else %}
+	<h1> False </h1>
+	<h1> this member doesn't exist in friends </h1>
+	{% endif %}
 
 
 </body>

@@ -28,9 +28,9 @@ def login():
 @app.route('/home')
 def home():
 	return render_template('home.html', facebook_friends = facebook_friends)
-@app.route('/friends_exists/<string: name>', methods = ['GET', 'POST'])
-def friends_exists(friends_exists):
-	return render_template('friends_exists.html', facebook_friends = friends_exists)
+@app.route('/friends_exists/<string:name>', methods = ['GET', 'POST'])
+def friends_exists(name):
+	return render_template('friend_exists.html', facebook_friends = facebook_friends, friend = name)
 
   
 

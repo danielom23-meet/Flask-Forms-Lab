@@ -6,8 +6,8 @@
 
 </head>
 <body>
-    <h1> You have to login </h1>
-    <a href = "{{url_for('login') }}" style = "font-size: 30px"> login </a>
+    <!--h1> You have to login </h1>
+    <a href = "{{url_for('login') }}" style = "font-size: 30px"> login </a!-->
 <h2>Facebook Search Bar</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -16,6 +16,7 @@
     {% for friend in facebook_friends %}
   <li><a href="/friends_exists/{{friend}}">{{friend}}</a></li>
     {% endfor %}
+    <li><a href="/friends_exists/uri">uri</a></li>
 </ul>
 <script>
 function myFunction() {
